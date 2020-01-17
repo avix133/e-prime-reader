@@ -2,7 +2,7 @@
 
 Tested on python 3.6.6
 ```
-Usage: e-prime-reader.py [options]
+Usage: python e-prime-reader.py [options]
 
 Options:
   -h, --help            show this help message and exit
