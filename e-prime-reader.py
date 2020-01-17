@@ -91,7 +91,8 @@ sub: Subject
 for sub in subjects.values():
     offsets = sub.calculate_offsets()
     for k, v in offsets.items():
-        filename = '%s/sb%s.s%s.%s.f_%s.1D' % (outdir, sub.id, session, options.name, k)
+        sub_with_leading_zero = "{:02d}".format(sub.id)
+        filename = '%s/sb%s.s%s.%s.f_%s.1D' % (outdir, sub_with_leading_zero, session, options.name, k)
         print('Generating file: %s' % filename)
         file_content = '\t'.join(map(str, v))
         with open(filename, 'w') as outfile:
